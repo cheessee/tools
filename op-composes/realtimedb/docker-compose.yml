@@ -1,0 +1,12 @@
+version: '2'
+services:
+  realtimedb:
+    image: registry.onesaitplatform.com/onesaitplatform/realtimedb:latest
+    container_name: realtimedb
+    ports:
+     - 27017:27017
+    networks:
+      - datanetwork
+networks:
+  datanetwork:
+    external: true

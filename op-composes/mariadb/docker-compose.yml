@@ -1,0 +1,12 @@
+version: '2'
+services:
+  configdb:
+    image: registry.onesaitplatform.com/onesaitplatform/configdb:mariadb
+    container_name: configdb
+    ports:
+    - 3306:3306
+    networks:
+      - datanetwork
+networks:
+  datanetwork:
+    external: true

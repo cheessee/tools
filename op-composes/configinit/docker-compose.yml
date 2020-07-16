@@ -1,0 +1,13 @@
+version: '2'
+services:
+  configdb:
+    image: registry.onesaitplatform.com/onesaitplatform/configinit:1.6.2-empire
+    container_name: configinit
+    environment:
+     - LOADMONGODB=false
+     - LOADELASTICDB=false
+    networks:
+      - datanetwork
+networks:
+  datanetwork:
+    external: true

@@ -1,0 +1,10 @@
+version: '2'
+services:
+  schedulerdb:
+    image: registry.onesaitplatform.com/onesaitplatform/schedulerdb:latest
+    container_name: schedulerdb
+    networks:
+      - datanetwork
+networks:
+  datanetwork:
+    external: true
